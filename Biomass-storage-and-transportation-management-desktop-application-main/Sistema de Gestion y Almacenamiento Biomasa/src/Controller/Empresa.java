@@ -44,4 +44,22 @@ public class Empresa {
     
     
 }
+
+public Empleado buscarEmpleadoPorId(int id) {
+    for (Empleado empleado : empleadosList) {
+        if (empleado.getId() == id) {
+            return empleado;
+        }
+    }
+    return null; 
+}
+
+public Almacen buscarAlmacenPorNombre(String nombre) {
+    for (Almacen almacen : almacenesList) {
+        if (almacen.getNombre().equals(nombre)) {
+            return almacen;
+        }
+    }
+    return null; 
+}
 }

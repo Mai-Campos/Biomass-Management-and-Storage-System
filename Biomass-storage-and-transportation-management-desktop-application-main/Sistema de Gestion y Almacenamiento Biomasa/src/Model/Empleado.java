@@ -11,4 +11,16 @@ public class Empleado {
         this.id = id;
         this.tipoTrabajo = tipoTrabajo;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getTipoTrabajo() {
+        return tipoTrabajo;
+    }
 }
