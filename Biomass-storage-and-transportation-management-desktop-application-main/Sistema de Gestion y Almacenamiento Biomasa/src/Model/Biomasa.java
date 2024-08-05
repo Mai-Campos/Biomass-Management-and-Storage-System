@@ -1,7 +1,7 @@
 package Model;
 
-public abstract class Biomasa {
-    protected String nombre;
+public class Biomasa {
+    protected String tipo;
     protected int peso;
 
     

@@ -2,11 +2,8 @@ package Model;
 
 public class BiomasaResidual extends Biomasa {
 
-    protected String tipoResiduo;
-
-    public BiomasaResidual(String tipoResiduo, String nombre, int peso){
-        this.tipoResiduo = tipoResiduo;
-        this.nombre = nombre;
+    public BiomasaResidual(String tipo, int peso){
+        this.tipo = tipo;
         this.peso = peso;
        
     }

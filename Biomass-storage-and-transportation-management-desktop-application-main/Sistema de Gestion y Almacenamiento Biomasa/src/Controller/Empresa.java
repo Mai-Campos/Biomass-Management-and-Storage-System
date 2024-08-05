@@ -11,8 +11,12 @@ public class Empresa {
     protected ArrayList<Almacen> almacenesList;
     protected ArrayList<Empleado> empleadosList;
     protected ArrayList<Vehiculo> vehiculosList;
+    Almacen almacen;
+    Empleado empleado;
+    Vehiculo vehiculo;
 
     public Empresa() {
+       new Almacen();
         almacenesList = new ArrayList<>();
         empleadosList = new ArrayList<>();
         vehiculosList = new ArrayList<>();
@@ -42,6 +46,10 @@ public class Empresa {
     public void eliminarVehiculo(Vehiculo vehiculo) {
         vehiculosList.remove(vehiculo);
     
-    
-}
+    }
+    public void agregarEmpleado(String nombre,String tipoTrabajo,int id){
+        new Empleado(nombre,id,tipoTrabajo);
+        empleadosList.add(empleado);
+
+    }
 }

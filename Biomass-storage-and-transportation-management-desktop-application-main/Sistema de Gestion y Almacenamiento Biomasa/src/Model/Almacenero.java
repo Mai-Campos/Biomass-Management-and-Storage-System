@@ -2,14 +2,20 @@ package Model;
 
 public class Almacenero extends Empleado{
 
-    protected  Almacen almacenAsignado;
+    private ActividadBiomasa almacenAsignado;
 
-    public Almacenero(String nombre, int id, String tipoTrabajo, Almacen almacenAsignado) {
-        super(nombre, id, tipoTrabajo);
-        this.almacenAsignado = almacenAsignado;
-       
+    public Almacenero(String nombre, int empleadoId, String tipoTrabajo) {
+        super(nombre, empleadoId, tipoTrabajo);
     }
-    
+    public ActividadBiomasa asignarAlmacen(String almacen,String nombreAlmacen,int capacidadAlmacen) {
+        if (almacen.equalsIgnoreCase("Forestal")){
+            return new AlmacenBiomasaForestal(nombreAlmacen,capacidadAlmacen, empleadoId);
+        }
+        if (almacen.equalsIgnoreCase("Residual")){
+            return new AlmacenBiomasaResidual(nombreAlmacen,capacidadAlmacen, empleadoId);
+        }
+        return null;
+    }
    
 
 }

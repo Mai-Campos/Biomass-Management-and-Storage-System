@@ -3,12 +3,12 @@ package Model;
 public class Empleado {
 
     protected String nombre;
-    protected int id;
+    protected int empleadoId;
     protected String tipoTrabajo;
 
-    public Empleado(String nombre, int id, String tipoTrabajo){
+    public Empleado(String nombre, int empleadoId, String tipoTrabajo){
         this.nombre = nombre;
-        this.id = id;
+        this.empleadoId = empleadoId;
         this.tipoTrabajo = tipoTrabajo;
     }
 }

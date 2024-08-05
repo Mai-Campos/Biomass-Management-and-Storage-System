@@ -1,16 +1,16 @@
 package Model;
 
-public class AlmacenBiomasaResidual extends Almacen implements GuardarBiomasa {
+public class AlmacenBiomasaResidual extends Almacen implements ActividadBiomasa {
 
-    public AlmacenBiomasaResidual(String nombre, int capacidad , int empleadoId){
+    public AlmacenBiomasaResidual(String tipo, int capacidad , int almaceneroId){
         this.nombre = nombre;
         this.capacidad = capacidad;
-        this.empleadoId = empleadoId;
+        this.almaceneroId = almaceneroId;
     }
 
     
-    public Biomasa guardarBiomasa(Biomasa biomasa) {
-       return biomasa;
+    public void guardarBiomasa(Biomasa biomasa) {
+        biomasaLista.add(biomasa);
     }
 
 }

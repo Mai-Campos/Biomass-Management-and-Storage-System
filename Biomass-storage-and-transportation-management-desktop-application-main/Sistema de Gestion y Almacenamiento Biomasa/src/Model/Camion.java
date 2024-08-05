@@ -9,5 +9,8 @@ public class Camion extends Vehiculo{
         this.tipoBiomasaTransporte = tipoBiomasaTransporte;
         this.capacidadTransporte = capacidadTransporte;
     }
+    public String transportarBiomasa(){
+        return "Biomasa transportada: " + tipoBiomasaTransporte + " en Camion";
+    }
 
 }
