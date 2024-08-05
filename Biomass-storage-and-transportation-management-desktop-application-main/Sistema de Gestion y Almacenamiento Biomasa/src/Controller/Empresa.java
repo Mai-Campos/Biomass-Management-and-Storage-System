@@ -22,6 +22,11 @@ public class Empresa {
 
     
     public void agregarAlmacen(Almacen almacen) {
+        if (almacen == null) {
+            throw new NullPointerException("El almacen no puede ser null");
+        }else if (almacenesList.contains(almacen)) {
+            throw new IllegalArgumentException("El almacen ya existe en la lista");
+        }
         almacenesList.add(almacen);
     }
 
@@ -30,6 +35,13 @@ public class Empresa {
     }
 
     public void agregarEmpleado(Empleado empleado) {
+
+        if (empleado == null) {
+            throw new NullPointerException("El empleado no puede ser null");
+        }
+        if (empleadosList.contains(empleado)) {
+            throw new IllegalArgumentException("El empleado ya existe en la lista");
+        }
         empleadosList.add(empleado);
     }
 
@@ -38,6 +50,13 @@ public class Empresa {
     }
 
     public void agregarVehiculo(Vehiculo vehiculo) {
+        if (vehiculo == null) {
+            throw new NullPointerException("El vehículo no puede ser null");
+        }
+        if (vehiculosList.contains(vehiculo)) {
+            throw new IllegalArgumentException("El vehículo ya existe en la lista");
+        }
+        
         vehiculosList.add(vehiculo);
     }
 
