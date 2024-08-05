@@ -1,16 +1,21 @@
 package Model;
 
-public class AlmacenBiomasaForestal extends Almacen implements GuardarBiomasa {
+import java.util.ArrayList;
+
+public class AlmacenBiomasaForestal extends Almacen implements ActividadBiomasa {
+
+
+
 
     public AlmacenBiomasaForestal(String nombre, int capacidad , int empleadoId){
         this.nombre = nombre;
         this.capacidad = capacidad;
-        this.empleadoId = empleadoId;
+        this.almaceneroId = empleadoId;
     }
 
   
-    public Biomasa guardarBiomasa(Biomasa biomasa) {
-        return biomasa;
+    public void guardarBiomasa(Biomasa biomasa) {
+       biomasaLista.add(biomasa);
     }
 
     
