@@ -2,6 +2,8 @@ package Controller;
 
 import java.util.ArrayList;
 
+import Excepcion.AlmacenNoEncontrado;
+import Excepcion.EmpleadoNoEncontrado;
 import Model.Almacen;
 import Model.Empleado;
 import Model.Vehiculo;
@@ -51,7 +53,7 @@ public Empleado buscarEmpleadoPorId(int id) {
             return empleado;
         }
     }
-    return null; 
+    throw new EmpleadoNoEncontrado("Empleado con Id: " + id + " no encontrado");
 }
 
 public Almacen buscarAlmacenPorNombre(String nombre) {
@@ -60,6 +62,6 @@ public Almacen buscarAlmacenPorNombre(String nombre) {
             return almacen;
         }
     }
-    return null; 
+    throw new AlmacenNoEncontrado("El almacen " + nombre + " no existe");
 }
 }
