@@ -11,4 +11,12 @@ public class Chofer extends Empleado{
       
     }
 
+    public Vehiculo getVehiculoAsignado(){
+        if (vehiculoAsignado != null) {
+            return vehiculoAsignado;
+        } else {
+            throw new RuntimeException("No se ha asignado un vehículo a este chofer");
+        }
+    }
+
 }
