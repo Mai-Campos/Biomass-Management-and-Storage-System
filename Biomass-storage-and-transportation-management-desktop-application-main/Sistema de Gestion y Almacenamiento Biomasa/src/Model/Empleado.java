@@ -17,7 +17,7 @@ public class Empleado {
     }
 
     public int getId() {
-        return id;
+        return empleadoId;
     }
 
     public String getTipoTrabajo() {
